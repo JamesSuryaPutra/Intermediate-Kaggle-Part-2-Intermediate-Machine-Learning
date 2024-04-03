@@ -1,10 +1,7 @@
-January 27th, 2024
-Intermediate Kaggle
--2nd Course: Intermediate Machine Learning-
-
-=======================
+Date: January 27th, 2024
 User: James Surya Putra
-=======================
+
+# Intermediate Kaggle: 2nd Course - Intermediate Machine Learning
 
 DISCLAIMER:
 - All tutorials and exercises are taken, including questions, submissions, hints, and solutions.
