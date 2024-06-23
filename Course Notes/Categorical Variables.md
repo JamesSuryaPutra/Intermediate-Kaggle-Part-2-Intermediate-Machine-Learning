@@ -76,7 +76,7 @@ forest model. In general, we want the MAE to be as low as possible!
         return mean_absolute_error(y_valid, preds)
 
 
-# Score from 1st approach (drop categorical variables)
+# Score from 1st approach: Drop categorical variables
 We drop the object columns with the select_dtypes() method.
 
     drop_X_train = X_train.select_dtypes(exclude=['object'])
@@ -89,7 +89,7 @@ We drop the object columns with the select_dtypes() method.
     175703.48185157913
 
 
-# Score from 2nd approach (ordinal encoding)
+# Score from 2nd approach: Ordinal encoding
 Scikit-learn has a OrdinalEncoder class that can be used to get ordinal encodings. We loop over the categorical variables and apply the ordinal encoder separately to each column.
 
     from sklearn.preprocessing import OrdinalEncoder
@@ -113,7 +113,7 @@ Scikit-learn has a OrdinalEncoder class that can be used to get ordinal encoding
 In the code cell above, for each column, we randomly assign each unique value to a different integer. This is a common approach that is simpler than providing custom labels; however,
 we can expect an additional boost in performance if we provide better-informed labels for all ordinal variables.
 
-# Score from 3rd approach (one-hot encoding)
+# Score from 3rd approach: One-hot encoding
 We use the OneHotEncoder class from scikit-learn to get one-hot encodings. There are a number of parameters that can be used to customize its behavior:
 
 1} We set handle_unknown='ignore' to avoid errors when the validation data contains classes that aren't represented in the training data, and
